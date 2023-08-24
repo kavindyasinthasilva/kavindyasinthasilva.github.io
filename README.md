@@ -11,6 +11,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="kavindu yasintha | FullStack Developer" />
+    <meta name= “robots” content=noindex, nofollow”>
+    <meta name= “robots” content=noindex, follow”>
+    <meta name= “robots” content=index, nofollow”>
+
+    <link rel="icon" type="image/png" href="./img/emoji/ico.jpg" hreflang="en-us" />
 
 
     <style>
