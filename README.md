@@ -18,6 +18,15 @@
 
     <link rel="icon" type="image/png" href="./img/emoji/ico.jpg" hreflang="en-us" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGBNM9778S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-SGBNM9778S');
+    </script>
 
     <style>
         body {
@@ -118,15 +127,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134673355-1"></script>
 
     <!-- importan this Animation  Defind the sky js id ==-->
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "UA-134673355-1");
-    </script>
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="style.css">
