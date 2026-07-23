@@ -175,6 +175,134 @@ section #text {
     margin-bottom: 2%;
 }
 
+/* Projects */
+.projects-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.projects-heading h5 {
+    margin: 0.25rem 0 0.5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+}
+
+.projects-heading p {
+    max-width: 680px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.projects-eyebrow {
+    color: #87e8ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.projects-all-link,
+.project-card a {
+    color: #a6efff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.projects-all-link {
+    flex: 0 0 auto;
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(166, 239, 255, 0.45);
+    border-radius: 999px;
+}
+
+.projects-all-link:hover,
+.project-card a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.project-card {
+    display: flex;
+    min-height: 270px;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 18px;
+    background: rgba(0, 45, 64, 0.7);
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(135, 232, 255, 0.58);
+    background: rgba(0, 53, 73, 0.88);
+}
+
+.project-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-card__icon {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(135, 232, 255, 0.15);
+    color: #a6efff;
+    font-size: 1.15rem;
+}
+
+.project-card__language {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.project-card h6 {
+    margin-bottom: 0.65rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#Projects .project-card p {
+    margin: 0 0 1.5rem;
+    color: rgba(255, 255, 255, 0.76);
+    line-height: 1.7;
+}
+
+.project-card a {
+    margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 0;
+    }
+}
+
 /* Properties for middle section (below water) */
 .sec {
     position: relative;
