@@ -646,6 +646,18 @@ html {
     transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
+.project-card--featured {
+    grid-column: 1 / -1;
+    min-height: 240px;
+    background:
+        radial-gradient(circle at 100% 0, rgba(135, 232, 255, 0.12), transparent 35%),
+        rgba(0, 45, 64, 0.76);
+}
+
+.project-card--featured p {
+    max-width: 900px;
+}
+
 .project-card:hover {
     transform: translateY(-4px);
     border-color: rgba(135, 232, 255, 0.58);
