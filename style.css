@@ -708,6 +708,214 @@ html {
     }
 }
 
+/* npm packages */
+.packages-section {
+    max-width: 1180px;
+    margin: 0 auto 2%;
+    padding: clamp(2rem, 4vw, 3.5rem);
+    border: 1px solid rgba(203, 56, 55, 0.3);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 100% 0, rgba(203, 56, 55, 0.15), transparent 34%),
+        linear-gradient(145deg, rgba(8, 65, 91, 0.94), rgba(7, 50, 74, 0.82));
+}
+
+.packages-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.packages-heading > div:first-child {
+    max-width: 720px;
+}
+
+.sec .packages-heading h3 {
+    margin: 0.3rem 0 0.65rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.sec .packages-heading p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.7;
+}
+
+.packages-summary {
+    display: grid;
+    min-width: 190px;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    background: rgba(0, 35, 54, 0.34);
+    text-align: right;
+}
+
+.packages-summary strong {
+    color: #ffffff;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.packages-summary span {
+    margin-top: 0.35rem;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.7rem;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.package-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 20px;
+    background: rgba(0, 35, 54, 0.38);
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.package-card:hover {
+    border-color: rgba(203, 56, 55, 0.55);
+    background: rgba(0, 42, 62, 0.55);
+    transform: translateY(-4px);
+}
+
+.package-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.package-card__icon {
+    display: grid;
+    width: 50px;
+    height: 42px;
+    place-items: center;
+    border-radius: 11px;
+    background: #cb3837;
+    color: #ffffff;
+    font-size: 1.7rem;
+}
+
+.package-card__version {
+    padding: 0.35rem 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.sec .package-card h4 {
+    margin: 0 0 0.7rem;
+    overflow-wrap: anywhere;
+    font-size: clamp(1.2rem, 2vw, 1.45rem);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sec .package-card p {
+    margin: 0 0 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.65;
+}
+
+.package-card__stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.package-card__stats > div {
+    display: grid;
+    padding: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.package-card__stats strong {
+    color: #ffffff;
+    font-size: 1.05rem;
+}
+
+.package-card__stats span {
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 0.68rem;
+}
+
+.package-card code {
+    display: block;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 0.85rem;
+    overflow-x: auto;
+    border-radius: 10px;
+    background: rgba(2, 25, 39, 0.72);
+    color: #a6efff;
+    font-size: 0.76rem;
+    white-space: nowrap;
+}
+
+.package-card > a,
+.packages-profile-link {
+    color: #a6efff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.package-card > a {
+    margin-top: auto;
+}
+
+.package-card > a:hover,
+.package-card > a:focus-visible,
+.packages-profile-link:hover,
+.packages-profile-link:focus-visible {
+    color: #ffffff;
+}
+
+.packages-profile-link {
+    display: inline-flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.82rem;
+}
+
+@media screen and (max-width: 760px) {
+    .packages-section {
+        margin-inline: -4%;
+        padding: 1.5rem;
+        border-radius: 22px;
+    }
+
+    .packages-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .packages-summary {
+        width: 100%;
+        text-align: left;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Contact */
 .contact-card {
     position: relative;
