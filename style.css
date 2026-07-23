@@ -154,44 +154,56 @@ section img {
 
 /* Properites for th text on top section  */
 section #text span {
-    font-size: 0.2em;
-    letter-spacing: 2px;
-    font-weight: 400;
-    color: white;
+    display: block;
+    margin-bottom: 0.7rem;
+    color: #e8fbff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.16em;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 section #text {
     position: absolute;
-    color: #004660;
-    width: min(90%, 1050px);
-    font-size: clamp(3rem, 8vw, 8rem);
-    text-align: center;
-    line-height: 0.68;
-    font-family: 'Rancho', cursive;
-    transform: translateY(-50%);
-    top: 52%;
+    top: 49%;
     z-index: 5;
+    width: min(92%, 1000px);
+    color: #ffffff;
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    text-align: center;
+    line-height: 0.82;
+    font-family: 'Rancho', cursive;
+    text-shadow: 0 4px 20px rgba(0, 35, 50, 0.55);
+    transform: translateY(-50%);
 }
 
 
 /* The explore Button */
 #explore {
+    position: absolute;
+    top: 66%;
+    z-index: 12;
     text-decoration: none;
-    /* To prevent Underline */
-    padding: 8px 25px;
-    background: white;
+    padding: 0.75rem 1.35rem;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.9);
     color: #003549;
-    font-size: 1.3em;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border-radius: 40px;
-    transform: translateY(100px);
-    /* To move it 100px below from center */
+    box-shadow: 0 12px 28px rgba(0, 35, 50, 0.2);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    border-radius: 999px;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+    transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 #explore:hover {
     background: #003549;
     color: white;
+    transform: translateY(-2px);
 }
 
 /* Propeties of Top button */
@@ -210,6 +222,16 @@ section #text {
     border-radius: 50%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+#top.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 
@@ -738,8 +760,13 @@ section #text {
     }
 
     section #text {
-        top: 50%;
-        font-size: clamp(3rem, 11vw, 5.5rem);
+        top: 47%;
+        width: min(90%, 650px);
+        font-size: clamp(3rem, 10vw, 5rem);
+    }
+
+    #explore {
+        top: 64%;
     }
 }
 
@@ -846,13 +873,21 @@ section #text {
     }
 
     section #text {
-        top: 48%;
-        font-size: clamp(2.65rem, 14vw, 4.25rem);
-        line-height: 0.72;
+        top: 45%;
+        width: 88%;
+        font-size: clamp(2.75rem, 13vw, 3.8rem);
+        line-height: 0.84;
     }
 
     section #text span {
-        font-size: 0.22em;
+        margin-bottom: 0.55rem;
+        font-size: 0.19em;
+    }
+
+    #explore {
+        top: 61%;
+        padding: 0.65rem 1.1rem;
+        font-size: 0.72rem;
     }
 
     /* Adjust text content acc to screen size */
