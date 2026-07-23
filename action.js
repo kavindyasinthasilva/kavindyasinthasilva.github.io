@@ -1,81 +1,73 @@
-// Select the class bubble
-time = document.getElementsByClassName('bubbles')[0];
+const bubbles = document.querySelector('.bubbles');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-// padding values for desktop
-var fish2move = 100;
-var fish3move = 900;
-var fish4move = 1200;
-
-if (screen.width < 400) {
-
-    //Change transformation duration and translatey for mobile view
-    time.style.setProperty('--transform-duration', '15s')
-    time.style.setProperty('--transform-y', '-700vh')
-
-    // padding values for mobile
-    fish2move = 1680;
-    fish3move = 3000;
-    fish4move = 4300;
+if (bubbles && window.innerWidth < 400) {
+    bubbles.style.setProperty('--transform-duration', '15s');
+    bubbles.style.setProperty('--transform-y', '-700vh');
 }
 
+const animatedElements = {
+    text: document.getElementById('text'),
+    cloud: document.getElementById('cloud'),
+    bird1: document.getElementById('bird1'),
+    bird2: document.getElementById('bird2'),
+    explore: document.getElementById('explore'),
+    rocks: document.getElementById('rocks'),
+    forest: document.getElementById('forest'),
+    sky: document.getElementById('sky'),
+    mountains: document.getElementById('mountains'),
+    header: document.getElementById('header'),
+    sun: document.getElementById('sun'),
+    splash: document.getElementById('splash'),
+    fish1: document.getElementById('fish1'),
+    fish2: document.getElementById('fish2'),
+    fish3: document.getElementById('fish3'),
+    fish4: document.getElementById('fish4')
+};
 
+let animationFrame = 0;
 
-window.addEventListener('scroll', function () {
+const renderParallax = () => {
+    animationFrame = 0;
 
-    let value = window.scrollY;   //Get Scroll Value (Mobile - High)
+    if (prefersReducedMotion.matches) {
+        return;
+    }
 
-    text.style.top = 50 + value * -0.2 + '%';
-    cloud.style.left = value * 2 + 'px';
+    const value = window.scrollY;
+    const mobile = window.innerWidth < 400;
+    const fish2Start = mobile ? 1680 : 100;
+    const fish3Start = mobile ? 3000 : 900;
+    const fish4Start = mobile ? 4300 : 1200;
 
-    bird1.style.top = value * 0.1 + 'px';
-    bird1.style.left = value * 1 + 'px';
+    animatedElements.text.style.top = `${50 - value * 0.2}%`;
+    animatedElements.cloud.style.left = `${value * 2}px`;
+    animatedElements.bird1.style.transform = `translate(${value}px, ${value * 0.1}px)`;
+    animatedElements.bird2.style.transform = `translate(${-value * 2}px, ${-value * 0.1}px)`;
+    animatedElements.explore.style.marginTop = `${value * 1.5}px`;
+    animatedElements.rocks.style.top = `${value * -0.14}px`;
+    animatedElements.forest.style.top = `${value * 0.4}px`;
+    animatedElements.sky.style.top = `${value * 0.25}px`;
+    animatedElements.mountains.style.top = `${value * 0.25}px`;
+    animatedElements.header.style.top = `${value * 0.7}px`;
+    animatedElements.sun.style.top = `${value}px`;
 
-    bird2.style.top = value * -0.1 + 'px';
-    bird2.style.left = value * -2 + 'px';
-
-    explore.style.marginTop = value * 1.5 + 'px';
-
-    rocks.style.top = value * -0.14 + 'px';
-
-    forest.style.top = value * 0.4 + 'px';
-    sky.style.top = value * 0.25 + 'px';
-    mountains.style.top = value * 0.25 + 'px';
-
-    header.style.top = value * 0.7 + 'px';
-    sun.style.top = value * 1 + 'px';
-
-    //To prevent splash to move above sea water
     if (value < 380) {
-        splash.style.top = 20 + value * -0.3 + 'px';
+        animatedElements.splash.style.top = `${20 - value * 0.3}px`;
     }
 
-    //Move fishes horizontally
-    fish1.style.right = (value - 100) * 1 + 'px';
-    fish2.style.left = (value - fish2move) * 1 + 'px';
-    fish3.style.right = (value - fish3move) * 1 + 'px';
-    fish4.style.left = (value - fish4move) * 1 + 'px';
-})
+    animatedElements.fish1.style.right = `${value - 100}px`;
+    animatedElements.fish2.style.left = `${value - fish2Start}px`;
+    animatedElements.fish3.style.right = `${value - fish3Start}px`;
+    animatedElements.fish4.style.left = `${value - fish4Start}px`;
+};
 
+const requestParallax = () => {
+    if (!animationFrame) {
+        animationFrame = window.requestAnimationFrame(renderParallax);
+    }
+};
 
-// Contains the link for all social media handles
-var links = document.getElementsByClassName("social-media");
-
-links[0].addEventListener("click", () => { openlink(1) });
-links[1].addEventListener("click", () => { openlink(2) });
-links[2].addEventListener("click", () => { openlink(3) });
-links[3].addEventListener("click", () => { openlink(4) });
-
-function openlink(x) {
-    if (x == 1) {
-        window.open("https://www.instagram.com/_k.yasintha_silva_/", "_blank");
-    }
-    if (x == 2) {
-        window.open("https://www.linkedin.com/in/s-kavindu-yasintha-silva-b0378b182/", "_blank");
-    }
-    if (x == 3) {
-        window.open("https://github.com/kavindyasinthasilva", "_blank");
-    }
-    if (x == 4) {
-        window.open("hhttp://kavindyasinthasilva.github.io", "_blank");
-    }
-}
+window.addEventListener('scroll', requestParallax, { passive: true });
+window.addEventListener('resize', requestParallax, { passive: true });
+prefersReducedMotion.addEventListener('change', requestParallax);

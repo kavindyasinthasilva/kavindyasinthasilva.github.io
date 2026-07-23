@@ -17,7 +17,30 @@ body {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
     /* To scrolling animation */
+}
+
+.skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 100000;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #003549;
+    font-weight: 700;
+    text-decoration: none;
+    transform: translateY(-160%);
+    transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+    color: #003549;
+    outline: 3px solid #87e8ff;
+    outline-offset: 3px;
+    transform: translateY(0);
 }
 
 #header {
@@ -119,7 +142,7 @@ html {
 }
 
 /* The Section Body... Set it to max size of screen */
-section {
+.hero {
     position: relative;
     width: 100%;
     min-height: 680px;
@@ -130,7 +153,7 @@ section {
 }
 
 /* To blend section color with water color */
-section::before {
+.hero::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -142,7 +165,7 @@ section::before {
 }
 
 /* Make all images absolute and cover whole screen */
-section img {
+.hero img {
     position: absolute;
     top: 0;
     left: 0;
@@ -153,7 +176,7 @@ section img {
 }
 
 /* Properites for th text on top section  */
-section #text span {
+.hero #text span {
     display: block;
     margin-bottom: 0.7rem;
     color: #e8fbff;
@@ -165,7 +188,7 @@ section #text span {
     text-transform: uppercase;
 }
 
-section #text {
+.hero #text {
     position: absolute;
     top: 49%;
     z-index: 5;
@@ -568,6 +591,170 @@ section #text {
     }
 }
 
+/* Contact */
+.contact-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(2rem, 5vw, 5rem);
+    max-width: 1180px;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    margin: 0 auto 2%;
+    padding: clamp(2rem, 5vw, 4rem);
+    overflow: hidden;
+    border: 1px solid rgba(135, 232, 255, 0.32);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(135, 232, 255, 0.18), transparent 32%),
+        linear-gradient(135deg, rgba(4, 48, 70, 0.96), rgba(8, 88, 116, 0.88));
+    box-shadow: 0 28px 70px rgba(0, 29, 45, 0.32);
+}
+
+.contact-card > div:first-child {
+    max-width: 670px;
+}
+
+.sec .contact-card h3 {
+    margin: 0.35rem 0 0.85rem;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
+}
+
+.sec .contact-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.76);
+    line-height: 1.7;
+}
+
+.contact-card__actions {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 210px;
+}
+
+.contact-card__actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.85rem 1.1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.contact-card__primary {
+    background: #ffffff;
+    color: #003549;
+}
+
+.contact-card__secondary {
+    border: 1px solid rgba(166, 239, 255, 0.36);
+    background: rgba(135, 232, 255, 0.08);
+    color: #d9f8ff;
+}
+
+.contact-card__actions a:hover,
+.contact-card__actions a:focus-visible {
+    color: #003549;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.contact-card__secondary:hover,
+.contact-card__secondary:focus-visible {
+    border-color: rgba(166, 239, 255, 0.72);
+    background: rgba(135, 232, 255, 0.18);
+    color: #ffffff;
+}
+
+.contact-card__actions a:focus-visible {
+    outline: 3px solid rgba(135, 232, 255, 0.35);
+    outline-offset: 3px;
+}
+
+/* GitHub activity */
+.github-card {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    border: 1px solid rgba(166, 239, 255, 0.2);
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(8, 65, 91, 0.9), rgba(7, 50, 74, 0.78));
+}
+
+.github-card__heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.github-card__heading h5 {
+    margin: 0.25rem 0 0;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    font-weight: 700;
+}
+
+.github-card__heading > a {
+    color: #a6efff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.github-card__heading > a:hover,
+.github-card__heading > a:focus-visible {
+    color: #ffffff;
+}
+
+.github-card__chart {
+    overflow-x: auto;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    background: rgba(0, 35, 54, 0.28);
+}
+
+.github-card__chart img {
+    display: block;
+    min-width: 720px;
+}
+
+@media screen and (max-width: 760px) {
+    .contact-card {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-inline: -4%;
+        padding: 1.5rem;
+        border-radius: 22px;
+    }
+
+    .contact-card__actions {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .github-card {
+        margin-inline: -4%;
+    }
+
+    .github-card__heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
 /* Properties for middle section (below water) */
 .sec {
     position: relative;
@@ -755,11 +942,11 @@ section #text {
         text-align: center;
     }
 
-    section {
+    .hero {
         min-height: 600px;
     }
 
-    section #text {
+    .hero #text {
         top: 47%;
         width: min(90%, 650px);
         font-size: clamp(3rem, 10vw, 5rem);
@@ -830,7 +1017,8 @@ section #text {
     list-style: none;
 }
 
-.sec #certification_badges ul > a {
+.sec #certification_badges ul > a,
+.sec #certification_badges ul > li {
     display: block;
     min-width: 0;
     padding: 0.8rem 0.9rem;
@@ -847,7 +1035,9 @@ section #text {
 }
 
 .sec #certification_badges ul > a:hover,
-.sec #certification_badges ul > a:focus-visible {
+.sec #certification_badges ul > a:focus-visible,
+.sec #certification_badges ul > li:hover,
+.sec #certification_badges ul > li:focus-within {
     border-color: rgba(135, 232, 255, 0.48);
     background: rgba(135, 232, 255, 0.1);
     color: #ffffff;
@@ -856,7 +1046,12 @@ section #text {
 
 .sec #certification_badges .skillz__category__item {
     margin: 0;
-    padding: 0;
+}
+
+#certification_badges .skillz__category__item > a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
 }
 
 #certification_badges .skillz__category__item i {
@@ -977,14 +1172,14 @@ section #text {
         padding: 0.75rem 1rem;
     }
 
-    section #text {
+    .hero #text {
         top: 45%;
         width: 88%;
         font-size: clamp(2.75rem, 13vw, 3.8rem);
         line-height: 0.84;
     }
 
-    section #text span {
+    .hero #text span {
         margin-bottom: 0.55rem;
         font-size: 0.19em;
     }
