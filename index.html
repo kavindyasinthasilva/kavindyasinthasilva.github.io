@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kavindu Yasintha Silva | Software Engineer in Vienna</title>
-    <meta name="description" content="Portfolio of Kavindu Yasintha Silva, a software engineer in Vienna building web applications, backend systems, cloud solutions, and developer tools.">
+    <meta name="description" content="Kavindu Yasintha Silva is a software engineer and Computer Science master's student in Vienna building web, backend, cloud, mobile, and developer tools.">
     <meta name="author" content="Kavindu Yasintha Silva">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="theme-color" content="#085a7a">
@@ -24,7 +24,7 @@
 
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Kavindu Yasintha Silva | Software Engineer in Vienna">
-    <meta property="og:description" content="Web applications, backend systems, cloud solutions, and developer tools built by Kavindu Yasintha Silva.">
+    <meta property="og:description" content="Software engineer and Computer Science master's student in Vienna building web, backend, cloud, mobile, and developer tools.">
     <meta property="og:url" content="https://kavindyasinthasilva.github.io/">
     <meta property="og:site_name" content="Kavindu Yasintha Silva">
     <meta property="og:locale" content="en_US">
@@ -40,7 +40,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@KYasintha">
     <meta name="twitter:title" content="Kavindu Yasintha Silva | Software Engineer in Vienna">
-    <meta name="twitter:description" content="Web applications, backend systems, cloud solutions, and developer tools by Kavindu Yasintha Silva.">
+    <meta name="twitter:description" content="Software engineer and Computer Science master's student in Vienna building web, backend, cloud, mobile, and developer tools.">
     <meta name="twitter:image" content="https://kavindyasinthasilva.github.io/og.png">
     <meta name="twitter:image:alt" content="Kavindu Yasintha Silva — Software Engineer in Vienna, Austria">
 
@@ -51,9 +51,12 @@
             "@id": "https://kavindyasinthasilva.github.io/#profile",
             "url": "https://kavindyasinthasilva.github.io/",
             "name": "Kavindu Yasintha Silva | Software Engineer in Vienna",
-            "description": "Portfolio of Kavindu Yasintha Silva, a software engineer in Vienna building web applications, backend systems, cloud solutions, and developer tools.",
+            "description": "Portfolio of Kavindu Yasintha Silva, a software engineer and Computer Science master's student in Vienna building web, backend, cloud, mobile, and developer tools.",
             "inLanguage": "en",
-            "dateModified": "2026-07-23",
+            "dateModified": "2026-09-02",
+            "isPartOf": {
+                "@id": "https://kavindyasinthasilva.github.io/#website"
+            },
             "primaryImageOfPage": {
                 "@type": "ImageObject",
                 "url": "https://kavindyasinthasilva.github.io/og.png",
@@ -68,16 +71,20 @@
                 "url": "https://kavindyasinthasilva.github.io/",
                 "image": "https://kavindyasinthasilva.github.io/img/sky.jpg",
                 "jobTitle": "Software Engineer",
-                "description": "Software engineer based in Vienna, Austria, focused on full-stack development, backend systems, cloud technologies, and developer tooling.",
+                "description": "Software engineer and final-semester Computer Science master's student based in Vienna, Austria, focused on full-stack development, backend systems, cloud technologies, mobile development, and developer tooling.",
                 "homeLocation": {
                     "@type": "Place",
                     "name": "Vienna, Austria"
                 },
                 "alumniOf": [
                     {"@type": "CollegeOrUniversity", "name": "University of Plymouth"},
-                    {"@type": "CollegeOrUniversity", "name": "NSBM Green University"},
-                    {"@type": "CollegeOrUniversity", "name": "University of Vienna"}
+                    {"@type": "CollegeOrUniversity", "name": "NSBM Green University"}
                 ],
+                "studentOf": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "University of Vienna",
+                    "url": "https://www.univie.ac.at/en/"
+                },
                 "knowsAbout": [
                     "Full-stack development",
                     "Backend systems",
@@ -94,6 +101,21 @@
                     "https://skysoftlk.com",
                     "https://www.instagram.com/_k.yasintha_silva_/"
                 ]
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://kavindyasinthasilva.github.io/#website",
+            "url": "https://kavindyasinthasilva.github.io/",
+            "name": "Kavindu Yasintha Silva",
+            "alternateName": "Sky Silva — Software Engineer",
+            "description": "Software engineering portfolio of Kavindu Yasintha Silva in Vienna, Austria.",
+            "inLanguage": "en",
+            "publisher": {
+                "@id": "https://kavindyasinthasilva.github.io/#person"
             }
         }
     </script>
@@ -122,15 +144,15 @@
 
 </head>
 
-<body>
+<body id="top-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- This is the header/ Nav Bar -->
     <header id="header">
-        <a href="#" class="logo" aria-label="Kavindu Yasintha Silva — home">🐻</a>
-        <nav class="menu" aria-label="Primary navigation">
+        <a href="#top-page" class="logo" aria-label="Kavindu Yasintha Silva — home">🐻</a>
+        <nav class="menu" id="primary-menu" aria-label="Primary navigation">
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#certification_badges">Certification & Badges</a></li>
+                <li><a href="#certification_badges">Certification &amp; Badges</a></li>
                 <li><a href="#Skills">Skills</a></li>
                 <li><a href="#Projects">Projects</a></li>
                 <li><a href="#Apps">Apps</a></li>
@@ -138,7 +160,7 @@
                 <li><a class="menu__contact" href="https://www.linkedin.com/in/s-kavindu-yasintha-sliva" target="_blank" rel="noopener noreferrer">Let’s connect</a></li>
             </ul>
         </nav>
-        <button class="burger" id="burger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <button class="burger" id="burger" type="button" aria-label="Open navigation" aria-controls="primary-menu" aria-expanded="false">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -149,33 +171,48 @@
         const burger = document.getElementById('burger');
         const menu = document.querySelector('.menu');
 
-        burger.addEventListener('click', () => {
-            menu.classList.toggle('active');
-            burger.setAttribute('aria-expanded', menu.classList.contains('active'));
-        });
+        const setMenuState = (open) => {
+            menu.classList.toggle('active', open);
+            burger.setAttribute('aria-expanded', String(open));
+            burger.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+        };
+
+        burger.addEventListener('click', () => setMenuState(!menu.classList.contains('active')));
 
         menu.querySelectorAll('a').forEach((link) => {
             link.addEventListener('click', () => {
-                menu.classList.remove('active');
-                burger.setAttribute('aria-expanded', 'false');
+                setMenuState(false);
             });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menu.classList.contains('active')) {
+                setMenuState(false);
+                burger.focus();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && !burger.contains(event.target)) {
+                setMenuState(false);
+            }
         });
     </script>
 
     <!-- This is the Top Section (Above Water) -->
     <section class="hero" aria-label="Introduction">
-        <img src="images/land/sky.png" id="sky" class="wallpaper" alt="">
-        <img src="images/land/sun.png" id="sun" alt="">
-        <img src="images/land/mountains.png" id="mountains" class="wallpaper" alt="">
-        <img src="images/land/cloud.png" id="cloud" alt="">
+        <img src="images/land/sky.png" id="sky" class="wallpaper" alt="" width="2049" height="1152" fetchpriority="high" decoding="async">
+        <img src="images/land/sun.png" id="sun" alt="" width="2049" height="1152" decoding="async">
+        <img src="images/land/mountains.png" id="mountains" class="wallpaper" alt="" width="2049" height="1152" decoding="async">
+        <img src="images/land/cloud.png" id="cloud" alt="" width="2049" height="1152" decoding="async">
         <h1 id="text"><span>Software Engineer</span><br>Kavindu Yasintha Silva</h1>
-        <img src="images/land/forest.png" id="forest" alt="">
-        <img src="images/land/bird1.png" id="bird1" alt="">
-        <img src="images/land/bird2.png" id="bird2" alt="">
+        <img src="images/land/forest.png" id="forest" alt="" width="2049" height="1152" decoding="async">
+        <img src="images/land/bird1.png" id="bird1" alt="" width="2049" height="1152" decoding="async">
+        <img src="images/land/bird2.png" id="bird2" alt="" width="2049" height="1152" decoding="async">
         <a href="#main-content" id="explore">Explore portfolio</a>
-        <img src="images/land/rocks.png" id="rocks" alt="">
-        <img src="images/land/splash.png" id="splash" alt="">
-        <img src="images/land/water.png" id="water" alt="">
+        <img src="images/land/rocks.png" id="rocks" alt="" width="2049" height="1155" decoding="async">
+        <img src="images/land/splash.png" id="splash" alt="" width="2049" height="1152" decoding="async">
+        <img src="images/land/water.png" id="water" alt="" width="2049" height="1152" decoding="async">
     </section>
 
     <!-- This is the Middle Section (Below Water) which has content -->
@@ -227,7 +264,7 @@
         </style>
 
         <!-- Text Content here -->
-        <div class="typewriter"></div>
+        <div class="typewriter" aria-hidden="true"></div>
         <h2>Kavindu Yasintha Silva</h2>
         <div id="name">Software Engineer 🐝</div>
 
@@ -269,7 +306,11 @@
                     }
                 }
 
-                type();
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    typewriterText.textContent = 'Hello 👋';
+                } else {
+                    type();
+                }
             </script>
 
 
@@ -338,7 +379,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                       <h5>Certifications</h5>
+                       <h4>Certifications</h4>
 
                         <ul>
                             <li class="skillz__category__item"><a href="https://coursera.org/share/e05b7c904d8cc626bf7421ab50d8583b" target="_blank" rel="noopener noreferrer"><i class="fa fa-circle-thin" aria-hidden="true"></i> Google Cloud Platform Big Data and Machine Learning Fundamentals</a></li>
@@ -351,7 +392,7 @@
 
                     </div>
                     <div class="col-sm">
-                        <h5>Professional Badges</h5>
+                        <h4>Professional Badges</h4>
 
                         <ul>
 
@@ -360,14 +401,10 @@
                             <li class="skillz__category__item"><a href="https://www.youracclaim.com/badges/f256ecd7-a7a6-4231-a581-62156ae38b0d/public_url" target="_blank" rel="noopener noreferrer"><i class="fa fa-circle-thin" aria-hidden="true"></i> Correlation and Regression</a></li>
                             <li class="skillz__category__item"><a href="https://www.youracclaim.com/badges/60d64ec5-ef06-417c-9845-848b0f08388c/public_url" target="_blank" rel="noopener noreferrer"><i class="fa fa-circle-thin" aria-hidden="true"></i> Decision Making with Data</a></li>
                             <li class="skillz__category__item"><a href="https://www.youracclaim.com/badges/1973ffcc-cad8-4f92-b596-4548d226e245/public_url" target="_blank" rel="noopener noreferrer"><i class="fa fa-circle-thin" aria-hidden="true"></i> LFD102: A Beginner's Guide to Open Source Software Development</a></li>
-                            <a href="https://www.youracclaim.com/users/kavinduyasinthasilva"><li class="skillz__category__item"><i class="fa fa-circle-thin" aria-hidden="true"></i> LFC210: Fundamentals of Professional Open Source Management</li>
-                            </a>
-                            <a href="https://www.youracclaim.com/users/kavinduyasinthasilva"><li class="skillz__category__item"><i class="fa fa-circle-thin" aria-hidden="true"></i> LFC101: Inclusive Speaker Orientation</li>
-                            </a>
-                            <a href="https://www.youracclaim.com/users/kavinduyasinthasilva"><li class="skillz__category__item"><i class="fa fa-circle-thin" aria-hidden="true"></i> LFD103: A Beginner's Guide to Linux Kernel Development</li>
-                            </a>
-                            <a href="https://www.youracclaim.com/users/kavinduyasinthasilva"><li class="skillz__category__item"><i class="fa fa-circle-thin" aria-hidden="true"></i> Design of Experiments</li>
-                            </a>
+                            <li class="skillz__category__item"><a href="https://www.youracclaim.com/users/kavinduyasinthasilva" target="_blank" rel="noopener noreferrer"><i class="fa fa-circle-thin" aria-hidden="true"></i> LFC210: Fundamentals of Professional Open Source Management</a></li>
+                            <li class="skillz__category__item"><a href="https://www.youracclaim.com/users/kavinduyasinthasilva" target="_blank" rel="noopener noreferrer"><i class="fa fa-circle-thin" aria-hidden="true"></i> LFC101: Inclusive Speaker Orientation</a></li>
+                            <li class="skillz__category__item"><a href="https://www.youracclaim.com/users/kavinduyasinthasilva" target="_blank" rel="noopener noreferrer"><i class="fa fa-circle-thin" aria-hidden="true"></i> LFD103: A Beginner's Guide to Linux Kernel Development</a></li>
+                            <li class="skillz__category__item"><a href="https://www.youracclaim.com/users/kavinduyasinthasilva" target="_blank" rel="noopener noreferrer"><i class="fa fa-circle-thin" aria-hidden="true"></i> Design of Experiments</a></li>
 
 
                         </ul>
@@ -384,14 +421,14 @@
         <section class="glass skills-section" id="Skills" aria-labelledby="skills-heading">
             <div class="skills-heading">
                 <span class="projects-eyebrow">Technology stack</span>
-                <h5 id="skills-heading">Skills &amp; Tools</h5>
+                <h3 id="skills-heading">Skills &amp; Tools</h3>
                 <p>Technologies I use to build, ship, and maintain modern software products.</p>
             </div>
 
             <div class="skills-grid">
                 <article class="skill-group">
                     <span class="skill-group__icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
-                    <h6>Languages</h6>
+                    <h4>Languages</h4>
                     <ul>
                         <li>JavaScript</li>
                         <li>TypeScript</li>
@@ -406,7 +443,7 @@
 
                 <article class="skill-group">
                     <span class="skill-group__icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
-                    <h6>Web &amp; Backend</h6>
+                    <h4>Web &amp; Backend</h4>
                     <ul>
                         <li>React</li>
                         <li>Angular</li>
@@ -419,7 +456,7 @@
 
                 <article class="skill-group">
                     <span class="skill-group__icon" aria-hidden="true"><i class="fa-solid fa-database"></i></span>
-                    <h6>Data</h6>
+                    <h4>Data</h4>
                     <ul>
                         <li>PostgreSQL</li>
                         <li>MySQL</li>
@@ -430,7 +467,7 @@
 
                 <article class="skill-group">
                     <span class="skill-group__icon" aria-hidden="true"><i class="fa-solid fa-cloud"></i></span>
-                    <h6>Cloud &amp; Tools</h6>
+                    <h4>Cloud &amp; Tools</h4>
                     <ul>
                         <li>AWS</li>
                         <li>Microsoft Azure</li>
@@ -446,11 +483,11 @@
 
         <br>
 
-        <div class="glass" id="Projects">
+        <section class="glass" id="Projects" aria-labelledby="projects-heading">
             <div class="projects-heading">
                 <div>
                     <span class="projects-eyebrow">Selected work</span>
-                    <h5>Projects</h5>
+                    <h3 id="projects-heading">Projects</h3>
                     <p>Practical engineering projects spanning IoT platforms, event-driven systems, backend services, and computer vision.</p>
                 </div>
                 <a class="projects-all-link" href="https://github.com/kavindyasinthasilva?tab=repositories" target="_blank" rel="noopener noreferrer">
@@ -464,7 +501,7 @@
                         <span class="project-card__icon" aria-hidden="true"><i class="fa-solid fa-bolt"></i></span>
                         <span class="project-card__language">Python · Django · React · IoT</span>
                     </div>
-                    <h6>Data Inspector</h6>
+                    <h4>Data Inspector</h4>
                     <p>An end-to-end energy-monitoring and device-control platform combining an ESP32 physical interface, NFC interactions, a Raspberry Pi hub, Shelly smart plugs, a Django REST API, and a React dashboard.</p>
                     <a href="https://github.com/kavindyasinthasilva/Data_Inspector" target="_blank" rel="noopener noreferrer">
                         View repository <span aria-hidden="true">↗</span>
@@ -476,7 +513,7 @@
                         <span class="project-card__icon" aria-hidden="true"><i class="fa-solid fa-diagram-project"></i></span>
                         <span class="project-card__language">Go · Kafka</span>
                     </div>
-                    <h6>Kafka Connector</h6>
+                    <h4>Kafka Connector</h4>
                     <p>A Go-based integration project for publishing and consuming events through Apache Kafka messaging workflows.</p>
                     <a href="https://github.com/kavindyasinthasilva/kafka-connector" target="_blank" rel="noopener noreferrer">
                         View repository <span aria-hidden="true">↗</span>
@@ -488,14 +525,14 @@
                         <span class="project-card__icon" aria-hidden="true"><i class="fa-solid fa-car"></i></span>
                         <span class="project-card__language">C# · Image processing</span>
                     </div>
-                    <h6>Smart Parking System</h6>
+                    <h4>Smart Parking System</h4>
                     <p>A C# parking-management prototype that applies image processing to identify number plates and support access tracking.</p>
                     <a href="https://github.com/kavindyasinthasilva/Image-Processing-Smart-parking-system" target="_blank" rel="noopener noreferrer">
                         View repository <span aria-hidden="true">↗</span>
                     </a>
                 </article>
             </div>
-        </div>
+        </section>
 
         <br>
 
@@ -629,13 +666,13 @@
             <div class="github-card__heading">
                 <div>
                     <span class="projects-eyebrow">Open source</span>
-                    <h5>GitHub Activity</h5>
+                    <h3>GitHub Activity</h3>
                 </div>
                 <a href="https://github.com/kavindyasinthasilva" target="_blank" rel="noopener noreferrer">Visit profile <span aria-hidden="true">↗</span></a>
             </div>
 
             <div class="github-card__chart">
-                <img width="100%" src="https://ghchart.rshah.org/kavindyasinthasilva" alt="Kavindu Yasintha Silva’s GitHub contribution activity" loading="lazy" />
+                <img width="100%" src="https://ghchart.rshah.org/kavindyasinthasilva" alt="Kavindu Yasintha Silva’s GitHub contribution activity" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
             </div>
         </div>
 
@@ -649,7 +686,7 @@
         <img src="images/sea/oceanbed.png" id="seabed" class="fishes" alt="">
 
         <!-- Container for the bubble animation -->
-        <div class="bubbles">
+        <div class="bubbles" aria-hidden="true">
             <img src="images/sea/bubble.png" alt="">
             <img src="images/sea/bubble.png" alt="">
             <img src="images/sea/bubble.png" alt="">
@@ -694,7 +731,7 @@
     </footer>
 
     <!-- The button to scroll back to top -->
-    <a id="top" href="#"> <i class="fas fa-arrow-up"></i> </a>
+    <a id="top" href="#top-page" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
     <script>
         const backToTop = document.getElementById('top');
         const updateBackToTop = () => {

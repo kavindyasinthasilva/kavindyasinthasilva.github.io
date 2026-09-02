@@ -589,7 +589,7 @@ html {
     margin-bottom: 2rem;
 }
 
-.projects-heading h5 {
+.projects-heading h3 {
     margin: 0.25rem 0 0.5rem;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
@@ -689,10 +689,11 @@ html {
     font-weight: 600;
 }
 
-.project-card h6 {
+.project-card h4 {
     margin-bottom: 0.65rem;
     font-size: 1.25rem;
     font-weight: 700;
+    text-decoration: none;
 }
 
 #Projects .project-card p {
@@ -1279,7 +1280,7 @@ html {
     margin-bottom: 1.5rem;
 }
 
-.github-card__heading h5 {
+.github-card__heading h3 {
     margin: 0.25rem 0 0;
     font-size: clamp(1.7rem, 3vw, 2.4rem);
     font-weight: 700;
@@ -1582,7 +1583,7 @@ html {
     background: rgba(255, 255, 255, 0.055);
 }
 
-#certification_badges .col-sm h5 {
+#certification_badges .col-sm h4 {
     margin: 0 0 1.2rem;
     font-size: 1.05rem;
     font-weight: 700;
@@ -1658,7 +1659,7 @@ html {
     margin-bottom: 2rem;
 }
 
-.skills-heading h5 {
+.skills-heading h3 {
     margin: 0.25rem 0 0.65rem;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
@@ -1694,10 +1695,11 @@ html {
     color: #a6efff;
 }
 
-.skill-group h6 {
+.skill-group h4 {
     margin: 0 0 1rem;
     font-size: 1rem;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .sec .skill-group ul {
@@ -1860,5 +1862,27 @@ html {
     #sea8 {
         left: 50%;
         width: 15%;
+    }
+}
+
+/* Keyboard and motion accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #87e8ff;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }
